@@ -106,7 +106,7 @@
 
     In this question, you can ignore the port number since this is about selecting the network interfaces that the server listens on.
 
-    * `0.0.0.0:8200` is correct because `0.0.0.0` is how you refer to all intefaces when configuring a listener for anything, not just Vault.
+    * `0.0.0.0:8200` is correct because `0.0.0.0` is how you refer to all intefaces when configuring a listener for anything, not just Vault. This is a function of TCP.IP itself.
     * The first option is invalid as you cannot use DNS names for selecting interfaces.
     * The third option is invailid, as that selects specifically the `localhost` interface which is not all interfaces.
     * The fourth option is invalid because you must use a vaild IP format, which is composed entirely of numbers.
@@ -152,7 +152,7 @@
 
     > no configuration
 
-    Vault will use the default handler when no configuration is present, which is actually "shamir". This does not require any custom settings so a stanza isn't required.
+    Vault will use the default handler when no configuration is present. This does not require any custom settings so a stanza isn't required.
 
     </details>
     </details>
@@ -171,7 +171,7 @@
     <details>
     <summary>Reveal</summary>
 
-    All of these settings are "variable value" parameters and do not go inside a stanza, so they are simply set as `variable = value` in the configuration. You should add the following at the end of the file.
+    All of these settings are simple value parameters and do not go inside a stanza, so they are simply set as `variable = value` in the configuration. You should add the following at the end of the file.
 
     ```hcl
     ui = true
